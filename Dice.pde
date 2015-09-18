@@ -1,3 +1,7 @@
+Die Wat;
+int sum = 0;
+int dots;
+
 void setup()
 {
 	size(500,500);
@@ -7,9 +11,9 @@ void setup()
 void draw()
 {
 	background(0);
-	for(int myY = 0; myY < 500 ; myY+=50)
+	for(int myY = 2; myY < 502 ; myY+=50)
 	{
-		for(int myX = 0; myX < 500; myX += 50)
+		for(int myX = 2; myX < 502; myX += 50)
 		{
 			Die Wat = new Die(myX,myY);
 			Wat.roll();
@@ -20,22 +24,23 @@ void draw()
 
 void mousePressed()
 {
-	redraw();
+	redraw();//roll dice again
 }
 
 class Die //models one single dice cube
 {
-	//variable declarations here
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
+	int x, y;
+	Die(int myX, int myY) //constructor
+	{//variable initializations here
+		x = myX;
+		y = myY;
 	}
 	void roll()
 	{
-		//your code here
+		dots = (int)(Math.random() * 6 + 1);
 	}
 	void show()
 	{
-		//your code here
+		rect(x,y,45,45);
 	}
 }
