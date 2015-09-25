@@ -14,9 +14,21 @@ void draw()
 	{
 		for(int myX = 2; myX < 502; myX += 50)
 		{
+			if (myX < 202 || myX > 252)
+			{
 			Die Wat = new Die(myX,myY);
 			Wat.roll();
 			Wat.show();
+			}
+			else if(myY < 202 || myY > 252)
+				{
+				  Die Wat = new Die(myX,myY);
+				  Wat.roll();
+				  Wat.show();
+				}
+				else
+				{
+				}
 		}
 	}
 }
@@ -38,6 +50,10 @@ class Die //models one single dice cube
 	void roll()
 	{
 		dots = (int)(Math.random() * 6 + 1);
+	}
+	void show()
+	{
+		rect(x,y,45,45);
 		//1 dot: ellipse(myX+23, myY+23, 13, 13);
 		//2 dot: ellipse(myX+23, myY+15, 10, 10);
         //       ellipse(myX+23, myY+30, 10, 10);
@@ -59,9 +75,5 @@ class Die //models one single dice cube
         //		 ellipse(myX+30, myY+10, 10, 10);
         // 		 ellipse(myX+30, myY+22, 10, 10);
         //		 ellipse(myX+30, myY+35, 10, 10);
-	}
-	void show()
-	{
-		rect(x,y,45,45);
 	}
 }
