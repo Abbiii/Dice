@@ -27,8 +27,7 @@ void draw()
 				  Wat.show();
 				}
 				else
-				{
-				}
+				{}
 		}
 	}
 }
@@ -54,26 +53,43 @@ class Die //models one single dice cube
 	void show()
 	{
 		rect(x,y,45,45);
-		//1 dot: ellipse(myX+23, myY+23, 13, 13);
-		//2 dot: ellipse(myX+23, myY+15, 10, 10);
-        //       ellipse(myX+23, myY+30, 10, 10);
-        //3 dot: ellipse(myX+10, myY+35, 10, 10);
-        //       ellipse(myX+23, myY+23, 10, 10);
-        //		 ellipse(myX+35, myY+10, 10, 10);
-        //4 dot: ellipse(myX+13, myY+13, 10, 10);
-        //       ellipse(myX+13, myY+33, 10, 10);
-        //		 ellipse(myX+33, myY+13, 10, 10);
-        //		 ellipse(myX+33, myY+33, 10, 10);
-        //5 dot: ellipse(myX+10, myY+35, 10, 10);
-        //       ellipse(myX+35, myY+10, 10, 10);
-        //		 ellipse(myX+23, myY+23, 10, 10);
-        //		 ellipse(myX+10, myY+10, 10, 10);
-        //		 ellipse(myX+35, myY+35, 10, 10);
-        //6 dot: ellipse(myX+15, myY+10, 10, 10);
-        //       ellipse(myX+15, myY+22, 10, 10);
-        //		 ellipse(myX+15, myY+35, 10, 10);
-        //		 ellipse(myX+30, myY+10, 10, 10);
-        // 		 ellipse(myX+30, myY+22, 10, 10);
-        //		 ellipse(myX+30, myY+35, 10, 10);
+		//draw the dots
+		if (dots == 1)
+			ellipse(x+23, y+23, 13, 13);
+		if (dots == 2)
+		{
+			ellipse(x+23, y+15, 10, 10);
+			ellipse(x+23, y+30, 10, 10);
+		}	
+        if (dots == 3)
+        {
+        	ellipse(x+10, y+35, 10, 10);
+   			ellipse(x+23, y+23, 10, 10);
+        	ellipse(x+35, y+10, 10, 10);
+        }
+		if (dots == 4) 
+		{
+			ellipse(x+13, myY+13, 10, 10);
+			ellipse(x+13, myY+33, 10, 10);
+			ellipse(x+33, myY+13, 10, 10);
+			ellipse(x+33, myY+33, 10, 10);
+		}
+		if (dots == 5)
+		{
+			ellipse(x+10, myY+35, 10, 10);
+			ellipse(x+35, myY+10, 10, 10);
+			ellipse(x+23, myY+23, 10, 10);
+			ellipse(x+10, myY+10, 10, 10);
+			ellipse(x+35, myY+35, 10, 10);
+		}
+		if (dots == 6)
+		{
+			ellipse(x+15, myY+10, 10, 10);
+			ellipse(x+15, myY+22, 10, 10);
+			ellipse(x+15, y+35, 10, 10);
+			ellipse(x+30, y+10, 10, 10);
+ 			ellipse(x+30, y+22, 10, 10);
+			ellipse(x+30, y+35, 10, 10);
+		}
 	}
 }
